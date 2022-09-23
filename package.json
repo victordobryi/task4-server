@@ -7,7 +7,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "heroku-postbuild": "npm run build",
-    "web": "node server.js"
+    "web": "node index.js"
   },
   "keywords": [],
   "author": "",
