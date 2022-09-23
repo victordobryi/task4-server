@@ -31,4 +31,11 @@ pool.getConnection((err, connection) => {
   connection.release();
 });
 
+pool.end(function (err) {
+  if (err) {
+    return console.log(err.message);
+  }
+  // close all connections
+});
+
 export default pool;
