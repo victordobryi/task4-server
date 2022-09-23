@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "build": "node index.js"
+    "build": "node index.js",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "",
