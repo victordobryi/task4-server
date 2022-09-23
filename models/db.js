@@ -17,4 +17,15 @@ connection.connect((error) => {
   console.log('Successfully connected to the database.');
 });
 
+connection.on('error', function (err) {
+  console.log('db error', err);
+  if (err.code === 'PROTOCOL_CONNECTION_LOST') {
+    console.log('Connection was dropped, reconnecting!');
+    mysql.quit();
+    mysql.connect();
+  } else {
+    throw err;
+  }
+});
+
 export default connection;
