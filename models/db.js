@@ -17,15 +17,8 @@ connection.connect((error) => {
   console.log('Successfully connected to the database.');
 });
 
-connection.on('error', function (err) {
-  console.log('db error', err);
-  if (err.code === 'PROTOCOL_CONNECTION_LOST') {
-    console.log('Connection was dropped, reconnecting!');
-    connection.destroy();
-    connection.connect();
-  } else {
-    throw err;
-  }
-});
+setInterval(function () {
+  connection.query('SELECT 1');
+}, 5000);
 
 export default connection;
