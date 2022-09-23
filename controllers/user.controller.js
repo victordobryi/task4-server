@@ -1,4 +1,4 @@
-import User from '../models/db.js';
+import User from '../models/user.model.js';
 import { v4 as uuidv4 } from 'uuid';
 
 // Create and Save a new user
