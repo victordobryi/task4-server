@@ -21,8 +21,8 @@ connection.on('error', function (err) {
   console.log('db error', err);
   if (err.code === 'PROTOCOL_CONNECTION_LOST') {
     console.log('Connection was dropped, reconnecting!');
-    mysql.quit();
-    mysql.connect();
+    connection.destroy();
+    connection.connect();
   } else {
     throw err;
   }
