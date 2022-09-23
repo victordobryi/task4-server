@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "build": "node index.js",
     "start": "nodemon index.js",
     "heroku-postbuild": "npm run build",
     "web": "node index.js"
