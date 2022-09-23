@@ -21,13 +21,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // add user router
 app.use('/users', router);
 
-// a route for home page
-app.get('/home', (req, res) => {
-  res.json({ message: 'NodeJs CRUD Application' });
-});
-
-// require('./app/routes/user.routes.js')(app);
-
 // setting port to 3000, & listening for requests http request.
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
