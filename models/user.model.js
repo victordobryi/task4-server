@@ -1,6 +1,4 @@
 import sql from './db.js';
-import { v4 as uuidv4 } from 'uuid';
-import uuid_to_bin from 'mysql';
 
 // constructor
 const User = function (user) {
