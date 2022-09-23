@@ -17,6 +17,8 @@ connection.connect((error) => {
   console.log('Successfully connected to the database.');
 });
 
-connection.end((err) => console.log(err));
+connection.end((err) => {
+  connection.destroy();
+});
 
 export default connection;
