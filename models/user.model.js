@@ -55,8 +55,8 @@ User.getAll = (result) => {
 
 User.updateById = (id, user, result) => {
   sql.query(
-    'UPDATE users SET username = ?, password = ?, isBlock = ? WHERE id = ?',
-    [user.username, user.password, user.isBlock, id],
+    'UPDATE users SET username = ?, password = ?, isBlock = ?, email = ?, lastLogin = ?, createDate = ? WHERE id = ?',
+    [user.username, user.password, user.isBlock, user.email, user.lastLogin, user.createDate, id],
     (err, res) => {
       if (err) {
         console.log('error: ', err);
