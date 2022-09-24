@@ -14,6 +14,9 @@ export const create = (req, res) => {
   const user = new User({
     username: req.body.username,
     password: req.body.password,
+    email: req.body.email,
+    createDate: req.body.createDate,
+    lastLogin: req.body.lastLogin,
     id: uuidv4(),
     isBlock: false,
   });
